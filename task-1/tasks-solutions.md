@@ -9,6 +9,37 @@
 
 **Answer:** The mega data type contains **16 bits**.
 
+## Question 2: C++ Namespaces
+
+**Problem:** Create a C++ program demonstrating two separate namespaces, each containing a `sum` function with different return types (`int` and `long`).
+
+**Solution Code:**
+
+```cpp
+#include <iostream>
+
+namespace IntMath {
+    int sum(int a, int b) {
+        return a + b;
+    }
+}
+
+namespace LongMath {
+    long sum(long a, long b) {
+        return a + b;
+    }
+}
+
+int main() {
+    int intResult = IntMath::sum(15, 25);
+    std::cout << "IntMath::sum result  : " << intResult << std::endl;
+
+    long longResult = LongMath::sum(2147483640L, 15L);
+    std::cout << "LongMath::sum result : " << longResult << std::endl;
+
+    return 0;
+}
+```
 ## Question 3
 
 **A. Output:** `4294967295` *(Assuming a standard 32-bit system)*
